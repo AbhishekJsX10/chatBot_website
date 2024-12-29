@@ -1,0 +1,107 @@
+.h1{
+    font-size: 100px;
+    font-weight: 700;
+    background: linear-gradient(to right, #217bfe, #e55571);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.h3{
+    font-weight: 400;
+    max-width: 70%;
+}
+
+.start-button{
+  padding: 15px 25px;
+  background-color: #217bfe;
+  border-radius: 30px;
+  font-size: 20px;
+  color: whitesmoke;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.start-button:hover{
+  background-color: whitesmoke;
+  color: #217bfe;
+}
+
+.orbital{
+    animation: 100s linear infinite rotateOrbital;
+}
+
+@keyframes rotateOrbital {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(90deg);
+    }
+}
+
+
+.bot{
+    animation: 3s ease-in-out infinite alternate botanimate;
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.1));
+}
+
+@keyframes botanimate {
+    from {
+        transform: scale(1) rotate(0);
+    }
+    to {
+        transform: scale(1.1) rotate(-6deg);
+    }
+}
+
+.back{
+    background-image: url("./bg.png");
+    opacity: 0.15;
+    width: 200%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: 10s linear infinite alternate bganimate;
+}
+
+@keyframes bganimate {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.imgContainer {
+    box-shadow: 0 0 50px rgba(20, 14, 45, 0.8);
+}
+
+.chat {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.wrapper {
+    padding: 30px;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .homepage{
+        flex-direction: column;
+        gap: 0px;
+    }
+    .h1{
+       font-size: 64px; 
+    }
+    .h3{
+        max-width: 100%;
+    }
+    .chat{
+        display: none;
+    }
+}
+    
